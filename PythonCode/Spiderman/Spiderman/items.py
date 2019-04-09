@@ -49,3 +49,8 @@ class PriceHistory(Item):
     BackUp1 = Field()
     BackUp2 = Field()
     BackUp3 = Field()
+
+# test
+class Test(Item):
+    testNo = Field()
+    testName = Field()
