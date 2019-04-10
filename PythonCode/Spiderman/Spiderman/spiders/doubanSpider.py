@@ -63,7 +63,7 @@ class doubanSpider(Spider):
         return userAgents
 
     def get_No(self, test, response):
-        test['testNo'] =  '2' 
+        test['testNo'] = '2' 
         #response.url[32:-1]
         test['testName'] = '岛上书店'
         return test
@@ -75,6 +75,6 @@ class doubanSpider(Spider):
         elif 404 == response.status:
             print(response.url)
         else:
-            test = Test()
+            test = self.get_No(Test(),response)
             return test
 

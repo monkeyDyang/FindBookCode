@@ -13,11 +13,10 @@
 
 # Dao层
 
-from Spiderman.items import BookBaseInfo,Test
+from scrapy import Request
 
 import Spiderman.database as db
-
-from scrapy import Request
+from Spiderman.items import BookBaseInfo, PriceHistory, Test
 
 cursor = db.connection.cursor()
 
@@ -41,6 +40,7 @@ class SpidermanPipeline(object):
             '''
             Test
             '''
+            # self.save_test(item)
             exist = self.get_test(item)
             if not exist:
                 try:
@@ -52,3 +52,7 @@ class SpidermanPipeline(object):
             #     self.update_book_meta(item)
         return item
 
+# if __name__ == "__main__":
+#     sql = 'select * from test where testNo = 1'
+#     cursor.execute(sql)
+#     print(cursor.fetchone())
