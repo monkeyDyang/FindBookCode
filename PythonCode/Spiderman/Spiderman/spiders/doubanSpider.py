@@ -3,7 +3,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2019-04-05 17:05:55 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-04-05 18:52:42
+ * @Last Modified time: 2019-04-11 16:10:34
  */
 """
 
@@ -12,7 +12,7 @@ import scrapy
 import random
 import Spiderman.database as db
 
-from Spiderman.items import BookBaseInfo,Test
+from Spiderman.items import BaseInfo,PriceHistory,BookURL,Test
 
 from scrapy import Request,Spider
 
@@ -62,19 +62,23 @@ class doubanSpider(Spider):
             "Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; fr) Presto/2.9.168 Version/11.52",]
         return userAgents
 
-    def get_No(self, test, response):
-        test['testNo'] = '2' 
-        #response.url[32:-1]
-        test['testName'] = '岛上书店'
+    """
+    #  解析并获取需要的数据
+    """
+    def get_Test(self, test, response):
+        # regx = '//a[parent::span[child::span[text()=" 作者"]]]/text()'
+        regx = '//title/text()'
+        test['testNo'] =  '5' #response.url[32:-1]
+        test['testName'] = response.xpath(regx).extract()
+        # testName = response.xpath(regx).extract()
+        # if testName:
+        #     test['testName'] = '/'.join((i.strip() for i in testName))
         return test
 
     def parse(self, response):
-        if 35000 > len(response.body):
-            print(response.body)
-            print(response.url)
-        elif 404 == response.status:
+        if 404 == response.status:
             print(response.url)
         else:
-            test = self.get_No(Test(),response)
+            test = self.get_Test(Test(),response)
             return test
 

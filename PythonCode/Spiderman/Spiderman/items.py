@@ -8,9 +8,8 @@
 from scrapy import Item,Field
 
 
-# Book_BaseInfo
-class BookBaseInfo(Item):
-    No = Field()
+# FB_Book_BaseInfo
+class BaseInfo(Item):
     imgURL = Field()
     Name = Field()
     Author = Field()
@@ -23,26 +22,32 @@ class BookBaseInfo(Item):
     Press = Field()
     # 出版日期
     PublicationData = Field()
+    #内容简介
     BookContent = Field()
+    # 作者简介
     AuthorContent = Field()
+    # 目录
     Directory = Field()
     BackUp1 = Field()
     BackUp2 = Field()
     BackUp3 = Field()
 
-# Book_PriceHistory
+# FB_Book_PriceHistory
 class PriceHistory(Item):
-    No = Field()
     Book_No = Field()
     Seller_No = Field()
     Price = Field()
     Discount = Field()
     Createtime = Field()
-    # 对应网站商品链接地址
-    URL = Field()
     BackUp1 = Field()
     BackUp2 = Field()
     BackUp3 = Field()
+
+# FB_Book_URL
+class BookURL(Item):
+    Book_No = Field()
+    URL = Field()
+
 
 # test
 class Test(Item):
