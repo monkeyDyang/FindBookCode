@@ -48,7 +48,6 @@ class BookURL(Item):
     Book_No = Field()
     URL = Field()
 
-
 # test
 class Test(Item):
     testNo = Field()

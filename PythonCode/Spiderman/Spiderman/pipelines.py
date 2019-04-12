@@ -15,8 +15,8 @@
 
 from scrapy import Request
 
-import Spiderman.database as db
-from Spiderman.items import BaseInfo, PriceHistory,BookURL, Test
+import FindBookCode.PythonCode.Spiderman.Spiderman.database as db
+from FindBookCode.PythonCode.Spiderman.Spiderman.items import BaseInfo, PriceHistory,BookURL, Test
 
 cursor = db.connection.cursor()
 
@@ -108,6 +108,10 @@ class SpidermanPipeline(object):
                 except Exception as e:
                     print(item)
                     print(e)
+        # PriceHistory
+        elif  isinstance(item, PriceHistory):
+            self.Save_PriceHistory(item)
+            print('Save_Success!!!!!!!')
         # Test
         elif  isinstance(item, Test):
             exist = self.Get_test(item)
