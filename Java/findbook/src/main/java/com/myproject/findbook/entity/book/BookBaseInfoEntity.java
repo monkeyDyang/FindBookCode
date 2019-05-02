@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2019-04-30 16:57:42 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-05-01 00:09:01
+ * @Last Modified time: 2019-05-01 13:22:06
  */
 
 package com.myproject.findbook.entity.book;
@@ -281,6 +281,15 @@ public class BookBaseInfoEntity {
      */
     public void setBackUp5(String backUp5) {
         BackUp5 = backUp5;
+    }
+
+    @Override
+    public String toString() {
+        return "BookBaseInfoEntity [Author=" + Author + ", AuthorContent=" + AuthorContent + ", BackUp1=" + BackUp1
+                + ", BackUp2=" + BackUp2 + ", BackUp3=" + BackUp3 + ", BackUp4=" + BackUp4 + ", BackUp5=" + BackUp5
+                + ", BookContent=" + BookContent + ", Directory=" + Directory + ", ISBN=" + ISBN + ", Name=" + Name
+                + ", No=" + No + ", People=" + People + ", Press=" + Press + ", Price=" + Price + ", PublicationDate="
+                + PublicationDate + ", Score=" + Score + ", Start=" + Start + "]";
     }
 
         

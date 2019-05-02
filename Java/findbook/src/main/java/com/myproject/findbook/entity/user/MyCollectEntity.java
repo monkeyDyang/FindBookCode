@@ -5,7 +5,7 @@
  * @Last Modified time: 2019-05-01 00:15:14
  */
 
- package com.myproject.findbook.entity.user;
+package com.myproject.findbook.entity.user;
 
 import java.security.Timestamp;
 

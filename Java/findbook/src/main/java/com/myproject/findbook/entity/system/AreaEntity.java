@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2019-04-30 21:39:01 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-04-30 21:54:58
+ * @Last Modified time: 2019-05-02 13:27:12
  */
 
  package com.myproject.findbook.entity.system;
@@ -72,6 +72,12 @@ public class AreaEntity {
      */
     public void setParentAreaCode(String parentAreaCode) {
         ParentAreaCode = parentAreaCode;
+    }
+
+    @Override
+    public String toString() {
+        return "AreaEntity [AreaCode=" + AreaCode + ", AreaLevel=" + AreaLevel + ", AreaName=" + AreaName
+                + ", ParentAreaCode=" + ParentAreaCode + "]";
     }
 
     

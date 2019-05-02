@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2019-05-01 00:09:15 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-05-01 00:13:24
+ * @Last Modified time: 2019-05-01 17:08:15
  */
 
  package com.myproject.findbook.entity.user;
@@ -12,7 +12,7 @@ import java.security.Timestamp;
 /**
   * UserBaseInfo
   */
- public class UserBaseInfo {
+ public class UserBaseInfoEntity {
  
     private int No ;
     private String UserCode;
