@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2019-04-30 21:29:21 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-04-30 21:35:23
+ * @Last Modified time: 2019-05-02 22:05:12
  */
 
 package com.myproject.findbook.entity.book;
@@ -146,6 +146,13 @@ public class URLEntity {
      */
     public void setBackUp5(String backUp5) {
         BackUp5 = backUp5;
+    }
+
+    @Override
+    public String toString() {
+        return "URLEntity [BackUp1=" + BackUp1 + ", BackUp2=" + BackUp2 + ", BackUp3=" + BackUp3 + ", BackUp4="
+                + BackUp4 + ", BackUp5=" + BackUp5 + ", Book_No=" + Book_No + ", Code=" + Code + ", No=" + No + ", URL="
+                + URL + "]";
     }
 
 }

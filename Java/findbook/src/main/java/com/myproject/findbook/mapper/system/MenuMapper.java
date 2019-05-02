@@ -8,12 +8,23 @@
 package com.myproject.findbook.mapper.system;
 
 import com.myproject.findbook.mapper.*;
+
+import java.util.List;
+
 import com.myproject.findbook.entity.system.*;
 /**
  * MenuMapper
  */
-public class MenuMapper //extends Mapper<MenuEntity>
+public interface MenuMapper //extends Mapper<MenuEntity>
 {
 
-    
+    List<MenuEntity> selectAll(); 
+
+    MenuEntity selectEntity();
+
+    boolean insertEntity(MenuEntity entity);
+
+    boolean updateEntity(MenuEntity entity);
+
+    boolean deleteEntity(MenuEntity entity);
 }

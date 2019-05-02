@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2019-05-01 00:13:50 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-05-01 00:15:14
+ * @Last Modified time: 2019-05-02 22:07:06
  */
 
 package com.myproject.findbook.entity.user;
@@ -148,5 +148,12 @@ import java.security.Timestamp;
      */
     public void setBackUp5(String backUp5) {
         BackUp5 = backUp5;
+    }
+
+    @Override
+    public String toString() {
+        return "MyCollectEntity [BackUp1=" + BackUp1 + ", BackUp2=" + BackUp2 + ", BackUp3=" + BackUp3 + ", BackUp4="
+                + BackUp4 + ", BackUp5=" + BackUp5 + ", Book_No=" + Book_No + ", ColloectDate=" + ColloectDate + ", No="
+                + No + ", User_No=" + User_No + "]";
     }
  }

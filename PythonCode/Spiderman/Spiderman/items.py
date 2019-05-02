@@ -10,7 +10,8 @@ from scrapy import Item,Field
 
 # FB_Book_BaseInfo
 class BaseInfo(Item):
-    imgURL = Field()
+    # imgURL = Field()
+    No = Field()
     Name = Field()
     Author = Field()
     Price = Field()
@@ -31,22 +32,34 @@ class BaseInfo(Item):
     BackUp1 = Field()
     BackUp2 = Field()
     BackUp3 = Field()
+    BackUp4 = Field()
+    BackUp5 = Field()
 
 # FB_Book_PriceHistory
 class PriceHistory(Item):
+    No = Field()
     Book_No = Field()
-    Seller_No = Field()
     Price = Field()
-    Discount = Field()
-    Createtime = Field()
+    DisCount = Field()
+    CreateDate = Field()
+    Code = Field()
     BackUp1 = Field()
     BackUp2 = Field()
     BackUp3 = Field()
+    BackUp4 = Field()
+    BackUp5 = Field()
 
 # FB_Book_URL
 class BookURL(Item):
+    No = Field()
     Book_No = Field()
     URL = Field()
+    Code = Field()
+    BackUp1 = Field()
+    BackUp2 = Field()
+    BackUp3 = Field()
+    BackUp4 = Field()
+    BackUp5 = Field()
 
 # test
 class Test(Item):

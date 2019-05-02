@@ -8,13 +8,24 @@
 package com.myproject.findbook.mapper.user;
 
 import com.myproject.findbook.mapper.*;
+
+import java.util.List;
+
 import com.myproject.findbook.entity.user.*;
 
 /**
  * MyCollectMapper
  */
-public class MyCollectMapper //extends Mapper<MyCollectEntity>
+public interface MyCollectMapper //extends Mapper<MyCollectEntity>
 {
 
-    
+    List<MyCollectEntity> selectAll(); 
+
+    MyCollectEntity selectEntity();
+
+    boolean insertEntity(MyCollectEntity entity);
+
+    boolean updateEntity(MyCollectEntity entity);
+
+    boolean deleteEntity(MyCollectEntity entity);
 }

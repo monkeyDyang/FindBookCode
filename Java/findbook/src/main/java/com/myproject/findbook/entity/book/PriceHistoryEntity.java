@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2019-04-30 21:07:48 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-04-30 21:12:05
+ * @Last Modified time: 2019-05-02 22:04:56
  */
 
 package com.myproject.findbook.entity.book;
@@ -179,6 +179,13 @@ public class PriceHistoryEntity {
      */
     public void setBackUp5(String backUp5) {
         BackUp5 = backUp5;
+    }
+
+    @Override
+    public String toString() {
+        return "PriceHistoryEntity [BackUp1=" + BackUp1 + ", BackUp2=" + BackUp2 + ", BackUp3=" + BackUp3 + ", BackUp4="
+                + BackUp4 + ", BackUp5=" + BackUp5 + ", Book_No=" + Book_No + ", Code=" + Code + ", CreateDate="
+                + CreateDate + ", DisCount=" + DisCount + ", No=" + No + ", Price=" + Price + "]";
     }
 
 

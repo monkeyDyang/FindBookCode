@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2019-04-30 23:21:51 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-04-30 23:26:14
+ * @Last Modified time: 2019-05-02 22:05:45
  */
 
 package com.myproject.findbook.entity.system;
@@ -223,6 +223,14 @@ public class CodeEntity {
      */
     public void setBackUp5(String backUp5) {
         BackUp5 = backUp5;
+    }
+
+    @Override
+    public String toString() {
+        return "CodeEntity [BackUp1=" + BackUp1 + ", BackUp2=" + BackUp2 + ", BackUp3=" + BackUp3 + ", BackUp4="
+                + BackUp4 + ", BackUp5=" + BackUp5 + ", Code=" + Code + ", CodeName=" + CodeName + ", CodeType="
+                + CodeType + ", CodeTypeName=" + CodeTypeName + ", CreateDate=" + CreateDate + ", CreatePerson="
+                + CreatePerson + ", No=" + No + ", UpdateDate=" + UpdateDate + ", UpdatePerson=" + UpdatePerson + "]";
     }
 
 }

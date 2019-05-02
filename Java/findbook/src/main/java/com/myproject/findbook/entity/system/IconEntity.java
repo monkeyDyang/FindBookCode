@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2019-04-30 23:26:20 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-05-01 00:01:32
+ * @Last Modified time: 2019-05-02 22:06:06
  */
 
 package com.myproject.findbook.entity.system;
@@ -56,5 +56,10 @@ public class IconEntity {
      */
     public void setSort(int sort) {
         Sort = sort;
+    }
+
+    @Override
+    public String toString() {
+        return "IconEntity [IconCss=" + IconCss + ", No=" + No + ", Sort=" + Sort + "]";
     }
 }

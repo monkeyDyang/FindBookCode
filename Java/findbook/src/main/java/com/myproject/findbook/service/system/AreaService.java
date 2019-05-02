@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2019-05-02 10:06:24 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-05-02 10:33:37
+ * @Last Modified time: 2019-05-03 03:16:04
  */
 
 package com.myproject.findbook.service.system;
@@ -22,9 +22,9 @@ import org.springframework.stereotype.Service;
  public class AreaService {
  
      @Autowired
-     private AreaMapper areaDao ;
+     private AreaMapper dao ;
 
      public List<AreaEntity> getList(){
-         return areaDao.selectAll();
+         return dao.selectAll();
      }
  }

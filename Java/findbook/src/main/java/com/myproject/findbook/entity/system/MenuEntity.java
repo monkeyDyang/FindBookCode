@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2019-04-30 23:28:11 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-05-01 00:05:24
+ * @Last Modified time: 2019-05-02 22:06:23
  */
 package com.myproject.findbook.entity.system;
 
@@ -259,5 +259,15 @@ public class MenuEntity {
 	 */
 	public void setBackUp5(String backUp5) {
 		BackUp5 = backUp5;
+	}
+
+	@Override
+	public String toString() {
+		return "MenuEntity [BackUp1=" + BackUp1 + ", BackUp2=" + BackUp2 + ", BackUp3=" + BackUp3 + ", BackUp4="
+				+ BackUp4 + ", BackUp5=" + BackUp5 + ", CreateDate=" + CreateDate + ", CreatePerson=" + CreatePerson
+				+ ", Description=" + Description + ", IconClass=" + IconClass + ", IconUrl=" + IconUrl + ", MenuName="
+				+ MenuName + ", MenuSeq=" + MenuSeq + ", No=" + No + ", ParentCode=" + ParentCode + ", UpdateDate="
+				+ UpdateDate + ", UpdatePerson=" + UpdatePerson + ", Url=" + Url + ", isEnable=" + isEnable
+				+ ", isVisible=" + isVisible + "]";
 	}
 }

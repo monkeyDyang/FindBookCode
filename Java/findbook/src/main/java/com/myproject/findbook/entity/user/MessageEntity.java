@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2019-05-01 00:05:36 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-05-01 00:08:03
+ * @Last Modified time: 2019-05-02 22:06:42
  */
 package com.myproject.findbook.entity.user;
 
@@ -207,5 +207,13 @@ public class MessageEntity {
      */
     public void setBackUp5(String backUp5) {
         BackUp5 = backUp5;
+    }
+
+    @Override
+    public String toString() {
+        return "MessageEntity [BackUp1=" + BackUp1 + ", BackUp2=" + BackUp2 + ", BackUp3=" + BackUp3 + ", BackUp4="
+                + BackUp4 + ", BackUp5=" + BackUp5 + ", Content=" + Content + ", CreateDate=" + CreateDate + ", No="
+                + No + ", User_No=" + User_No + ", dislike=" + dislike + ", floor=" + floor + ", like=" + like
+                + ", tower=" + tower + "]";
     }
 }

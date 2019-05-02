@@ -8,13 +8,24 @@
 package com.myproject.findbook.mapper.user;
 
 import com.myproject.findbook.mapper.*;
+
+import java.util.List;
+
 import com.myproject.findbook.entity.user.*;
 
 /**
  * UserBaseInfoMapper
  */
-public class UserBaseInfoMapper //extends Mapper<UserBaseInfoEntity>
+public interface UserBaseInfoMapper //extends Mapper<UserBaseInfoEntity>
 {
 
-    
+    List<UserBaseInfoEntity> selectAll(); 
+
+    UserBaseInfoEntity selectEntity();
+
+    boolean insertEntity(UserBaseInfoEntity entity);
+
+    boolean updateEntity(UserBaseInfoEntity entity);
+
+    boolean deleteEntity(UserBaseInfoEntity entity);
 }

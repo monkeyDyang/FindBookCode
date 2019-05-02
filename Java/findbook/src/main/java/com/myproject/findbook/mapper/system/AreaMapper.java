@@ -29,7 +29,13 @@ import com.myproject.findbook.entity.system.*;
         @Result(property = "AreaType",column = "AreaType"),
         @Result(property = "ParentAreaCode",column = "ParentAreaCode")
     })
-    List<AreaEntity> selectAll();
+    List<AreaEntity> selectAll(); 
 
+    AreaEntity selectEntity();
 
+    boolean insertEntity(AreaEntity entity);
+
+    boolean updateEntity(AreaEntity entity);
+
+    boolean deleteEntity(AreaEntity entity);
  }

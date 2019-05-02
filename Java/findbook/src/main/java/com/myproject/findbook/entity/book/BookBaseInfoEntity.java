@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2019-04-30 16:57:42 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-05-01 13:22:06
+ * @Last Modified time: 2019-05-02 22:33:54
  */
 
 package com.myproject.findbook.entity.book;

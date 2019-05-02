@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2019-05-01 00:09:15 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-05-01 17:08:15
+ * @Last Modified time: 2019-05-02 22:07:18
  */
 
  package com.myproject.findbook.entity.user;
@@ -298,5 +298,15 @@ import java.security.Timestamp;
      */
     public void setBackUp5(String backUp5) {
         BackUp5 = backUp5;
+    }
+
+    @Override
+    public String toString() {
+        return "UserBaseInfoEntity [BackUp1=" + BackUp1 + ", BackUp2=" + BackUp2 + ", BackUp3=" + BackUp3 + ", BackUp4="
+                + BackUp4 + ", BackUp5=" + BackUp5 + ", CreateDate=" + CreateDate + ", CreatePersonIP=" + CreatePersonIP
+                + ", Delflag=" + Delflag + ", Description=" + Description + ", LastLoginDate=" + LastLoginDate
+                + ", Level=" + Level + ", LoginCount=" + LoginCount + ", No=" + No + ", Password=" + Password
+                + ", RealName=" + RealName + ", UpdateDate=" + UpdateDate + ", UpdatePersonIP=" + UpdatePersonIP
+                + ", UserCode=" + UserCode + ", UserName=" + UserName + "]";
     }
  }
