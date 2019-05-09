@@ -6,13 +6,15 @@
  * @Last Modified time: 2019-04-12 11:39:58
  */
 '''
-
+# import sys
+# sys.path.append(r'F:/毕业/毕业设计/源代码/FindBook/Python/Spider/Spiderman/spiders')
 import random
+import datetime
 
-class HeaderRandom(object):
+class CommonClass(object):
     
     # 构造随机选取user-agent的函数
-    def headersRandom(self):
+    def headers_Random(self):
         lists = self.UAPool()
         headers = {'User-Agent':random.choice(lists)}
         return headers
@@ -37,3 +39,10 @@ class HeaderRandom(object):
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/535.20 (KHTML, like Gecko) Chrome/19.0.1036.7 Safari/535.20",
             "Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; fr) Presto/2.9.168 Version/11.52",]
         return userAgents
+
+
+    def getSystemTime(self):
+        now_time = datetime.datetime.now().strftime('%Y-%m-%d')
+        return now_time
+
+        

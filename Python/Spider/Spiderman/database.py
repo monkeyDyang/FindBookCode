@@ -6,7 +6,7 @@
  * @Last Modified time: 2019-05-02 17:18:54
  */
 """
-
+import sys
 import pymysql
 import pymysql.cursors
 
@@ -25,16 +25,18 @@ connection = pymysql.connect(host=MYSQL_HOST,
 
 
 # DBConnection_test
-# """
+
 # cursors = connection.cursor()
-# sql = 'insert into test value (3,"ss")'
-# cursors.execute(sql)
+# sql = 'select * from fb_book_url where BookName= %s and Code = 1006'
+# # sql = 'insert into test value (43,"ss")'
+# cursors.execute(sql,('dao'))
 # connection.commit()
 # print("********")
 # print(cursors.rowcount)
 # print("********")
 # cursors.close()
 # connection.close()
-# """
+
 # 测试结果 成功向 test表插入一条数据，返回1
 
+# print(sys.path)
