@@ -7,10 +7,6 @@
 
 package com.myproject.findbook.mapper.book;
 
-import com.myproject.findbook.mapper.*;
-
-import org.apache.ibatis.annotations.Select;
-
 import java.util.List;
 
 import com.myproject.findbook.entity.book.*;

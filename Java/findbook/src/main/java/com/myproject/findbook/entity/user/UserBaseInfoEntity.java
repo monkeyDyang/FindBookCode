@@ -20,19 +20,12 @@ import java.security.Timestamp;
     private String UserName;  
     private String Level;       
     private String RealName;
-    private String Description;
+    private String Sex;
+    private String Address;
     private int LoginCount;
     private Timestamp LastLoginDate;
-    private String CreatePersonIP;
     private String CreateDate;
-    private String UpdatePersonIP;
-    private String UpdateDate;
     private boolean Delflag;
-    private String BackUp1;
-    private String BackUp2;
-    private String BackUp3;
-    private String BackUp4;
-    private String BackUp5;
 
     /**
      * @return the no
@@ -119,17 +112,31 @@ import java.security.Timestamp;
     }
 
     /**
-     * @return the description
+     * @return the sex
      */
-    public String getDescription() {
-        return Description;
+    public String getSex() {
+        return Sex;
     }
 
     /**
-     * @param description the description to set
+     * @param sex the sex to set
      */
-    public void setDescription(String description) {
-        Description = description;
+    public void setSex(String sex) {
+        Sex = sex;
+    }
+
+    /**
+     * @return the address
+     */
+    public String getAddress() {
+        return Address;
+    }
+
+    /**
+     * @param address the address to set
+     */
+    public void setAddress(String address) {
+        Address = address;
     }
 
     /**
@@ -161,20 +168,6 @@ import java.security.Timestamp;
     }
 
     /**
-     * @return the createPersonIP
-     */
-    public String getCreatePersonIP() {
-        return CreatePersonIP;
-    }
-
-    /**
-     * @param createPersonIP the createPersonIP to set
-     */
-    public void setCreatePersonIP(String createPersonIP) {
-        CreatePersonIP = createPersonIP;
-    }
-
-    /**
      * @return the createDate
      */
     public String getCreateDate() {
@@ -186,34 +179,6 @@ import java.security.Timestamp;
      */
     public void setCreateDate(String createDate) {
         CreateDate = createDate;
-    }
-
-    /**
-     * @return the updatePersonIP
-     */
-    public String getUpdatePersonIP() {
-        return UpdatePersonIP;
-    }
-
-    /**
-     * @param updatePersonIP the updatePersonIP to set
-     */
-    public void setUpdatePersonIP(String updatePersonIP) {
-        UpdatePersonIP = updatePersonIP;
-    }
-
-    /**
-     * @return the updateDate
-     */
-    public String getUpdateDate() {
-        return UpdateDate;
-    }
-
-    /**
-     * @param updateDate the updateDate to set
-     */
-    public void setUpdateDate(String updateDate) {
-        UpdateDate = updateDate;
     }
 
     /**
@@ -230,83 +195,14 @@ import java.security.Timestamp;
         Delflag = delflag;
     }
 
-    /**
-     * @return the backUp1
-     */
-    public String getBackUp1() {
-        return BackUp1;
-    }
-
-    /**
-     * @param backUp1 the backUp1 to set
-     */
-    public void setBackUp1(String backUp1) {
-        BackUp1 = backUp1;
-    }
-
-    /**
-     * @return the backUp2
-     */
-    public String getBackUp2() {
-        return BackUp2;
-    }
-
-    /**
-     * @param backUp2 the backUp2 to set
-     */
-    public void setBackUp2(String backUp2) {
-        BackUp2 = backUp2;
-    }
-
-    /**
-     * @return the backUp3
-     */
-    public String getBackUp3() {
-        return BackUp3;
-    }
-
-    /**
-     * @param backUp3 the backUp3 to set
-     */
-    public void setBackUp3(String backUp3) {
-        BackUp3 = backUp3;
-    }
-
-    /**
-     * @return the backUp4
-     */
-    public String getBackUp4() {
-        return BackUp4;
-    }
-
-    /**
-     * @param backUp4 the backUp4 to set
-     */
-    public void setBackUp4(String backUp4) {
-        BackUp4 = backUp4;
-    }
-
-    /**
-     * @return the backUp5
-     */
-    public String getBackUp5() {
-        return BackUp5;
-    }
-
-    /**
-     * @param backUp5 the backUp5 to set
-     */
-    public void setBackUp5(String backUp5) {
-        BackUp5 = backUp5;
-    }
-
     @Override
     public String toString() {
-        return "UserBaseInfoEntity [BackUp1=" + BackUp1 + ", BackUp2=" + BackUp2 + ", BackUp3=" + BackUp3 + ", BackUp4="
-                + BackUp4 + ", BackUp5=" + BackUp5 + ", CreateDate=" + CreateDate + ", CreatePersonIP=" + CreatePersonIP
-                + ", Delflag=" + Delflag + ", Description=" + Description + ", LastLoginDate=" + LastLoginDate
-                + ", Level=" + Level + ", LoginCount=" + LoginCount + ", No=" + No + ", Password=" + Password
-                + ", RealName=" + RealName + ", UpdateDate=" + UpdateDate + ", UpdatePersonIP=" + UpdatePersonIP
-                + ", UserCode=" + UserCode + ", UserName=" + UserName + "]";
+        return "UserBaseInfoEntity [Address=" + Address + ", CreateDate=" + CreateDate + ", Delflag=" + Delflag
+                + ", LastLoginDate=" + LastLoginDate + ", Level=" + Level + ", LoginCount=" + LoginCount + ", No=" + No
+                + ", Password=" + Password + ", RealName=" + RealName + ", Sex=" + Sex + ", UserCode=" + UserCode
+                + ", UserName=" + UserName + "]";
     }
+
+
+ 
  }

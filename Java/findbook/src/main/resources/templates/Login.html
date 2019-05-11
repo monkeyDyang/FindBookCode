@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FindBook</title>
+    <!-- 引入样式文件 -->
+    <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../static/css/login.css" rel="stylesheet">
+    <link href="../static/js/bootstrap/bootstrap.min.css"rel="stylesheet" />
+    <link href="../static/css/normalize.css" rel="stylesheet" />
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="../static/js/jquery/jquery-2.1.1.min.js"></script>
+    <!-- 弹出层 -->
+    <script src="../static/js/bootstrap/bootstrap.js"></script>
+    <script src="../static/js/framework-ui.js?v=1.0.1"></script>
+    <script src="../static/js/dialog/dialog.js"></script>
+
+    <!-- <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.7.2/css/all.min.css">
+    <link href="./src/slidercaptcha.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./src/longbow.slidercaptcha.js"></script> -->
+
+</head>
+<script>
+        $('#captcha').sliderCaptcha({
+            width: 280,
+            height: 150,
+            sliderL: 42,
+            sliderR: 9,
+            offset: 5,
+            loadingText: '正在加载中...',
+            failedText: '再试一次',
+            barText: '向右滑动填充拼图',
+            repeatIcon: 'fa fa-redo',
+            setSrc: function () {
+                 
+            },
+            onSuccess: function () {
+                 
+            },
+            onFail: function () {
+     
+            },
+            onRefresh: function () {
+             
+            }
+        });
+    </script> 
+<script language="javascript" type="text/javascript">
+
+    //初始化
+    (function ($) {
+        $.login = {
+            init: function () {
+                $('.wrapper').height($(window).height());
+                $(".container").css("margin-top", ($(window).height() - $(".container").height()) / 2 - 50);
+                $(window).resize(function (e) {
+                    $('.wrapper').height($(window).height());
+                    $(".container").css("margin-top", ($(window).height() - $(".container").height()) / 2 - 50);
+                });
+            }
+        };
+        $(function () {
+            $.login.init();
+        });
+    })(jQuery);
+    
+    //登录事件
+    function login() {
+        var userCode = $("#userCode").val();
+        var password = $("#password").val();
+        if (userCode == "") {
+            $.modalAlert("请输入用户帐号。");
+            return false;
+        } else if (password == "") {
+            $.modalAlert("请输入登录密码。");
+            return false;
+        }
+    }
+    //注册事件
+    function register() {
+        
+        // $.modalOpen({
+        //         id: "Form",
+        //         title: "数据库配置",
+        //         url: "/Login/Form",
+        //         width: "800px",
+        //         height: "600px",
+        //         btn: null
+        //     });
+        // window.location.href = "/register/view";   
+    }
+
+
+
+</script>
+<body>
+    <div class="htmleaf-container">
+    <div class="demo form-bg" style="padding: 20px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                        <!-- /login/check -->
+                <form class="form-horizontal " method="post" action="" id="login_form"> 
+                    <span class="heading">用户登录</span>
+                        <div class="form-group">
+                            <i class="fa fa-user fa-lg"></i>
+                            <input class="form-control required" type="text" name="userCode" id="userCode" placeholder="UserName" autofocus="autofocus" maxlength="20">
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-lock fa-lg"></i>
+                            <input class="form-control required" type="password" name="password" id="password" placeholder="Password">
+                        </div>
+                        <div class="form-group col-md-offset-9">
+                            <button type="submit" class="btn btn-success pull-left" onclick="login()">登录</button> 
+                            <button type="submit" class="btn btn-success pull-right" onclick="register()">注册</button>
+                        </div>
+                </form>
+                </div>
+<!-- 
+                <div id="captcha"></div>
+                <script>
+                        $('#captcha').sliderCaptcha();
+                        $('#captcha').sliderCaptcha('reset');
+                    </script> -->
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

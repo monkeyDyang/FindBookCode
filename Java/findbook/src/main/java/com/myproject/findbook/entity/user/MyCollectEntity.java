@@ -18,11 +18,6 @@ import java.security.Timestamp;
     private int Book_No;
     private int User_No;
     private Timestamp ColloectDate;
-    private String BackUp1;
-    private String BackUp2;
-    private String BackUp3;
-    private String BackUp4;
-    private String BackUp5;
 
     /**
      * @return the no
@@ -80,80 +75,4 @@ import java.security.Timestamp;
         ColloectDate = colloectDate;
     }
 
-    /**
-     * @return the backUp1
-     */
-    public String getBackUp1() {
-        return BackUp1;
-    }
-
-    /**
-     * @param backUp1 the backUp1 to set
-     */
-    public void setBackUp1(String backUp1) {
-        BackUp1 = backUp1;
-    }
-
-    /**
-     * @return the backUp2
-     */
-    public String getBackUp2() {
-        return BackUp2;
-    }
-
-    /**
-     * @param backUp2 the backUp2 to set
-     */
-    public void setBackUp2(String backUp2) {
-        BackUp2 = backUp2;
-    }
-
-    /**
-     * @return the backUp3
-     */
-    public String getBackUp3() {
-        return BackUp3;
-    }
-
-    /**
-     * @param backUp3 the backUp3 to set
-     */
-    public void setBackUp3(String backUp3) {
-        BackUp3 = backUp3;
-    }
-
-    /**
-     * @return the backUp4
-     */
-    public String getBackUp4() {
-        return BackUp4;
-    }
-
-    /**
-     * @param backUp4 the backUp4 to set
-     */
-    public void setBackUp4(String backUp4) {
-        BackUp4 = backUp4;
-    }
-
-    /**
-     * @return the backUp5
-     */
-    public String getBackUp5() {
-        return BackUp5;
-    }
-
-    /**
-     * @param backUp5 the backUp5 to set
-     */
-    public void setBackUp5(String backUp5) {
-        BackUp5 = backUp5;
-    }
-
-    @Override
-    public String toString() {
-        return "MyCollectEntity [BackUp1=" + BackUp1 + ", BackUp2=" + BackUp2 + ", BackUp3=" + BackUp3 + ", BackUp4="
-                + BackUp4 + ", BackUp5=" + BackUp5 + ", Book_No=" + Book_No + ", ColloectDate=" + ColloectDate + ", No="
-                + No + ", User_No=" + User_No + "]";
-    }
  }
